@@ -14,10 +14,12 @@
   
   
   
-=====================================================
+=====================================================　　　
 * 答案1: 打開Makefile,可以看到warning as error(-Werror)打開了,註解後可以正常編譯通過;Warning as error是很好的確保軟體品質的手段之一,建議遇到的時候要一個一個去解,但我們目的是要先進行教材後面的內容,因此先註解掉.
-* 答案2: (建議先讀完投影片)
-gdb ./eserv進入gdb的交互命令,照著投影片說明,用瀏覽器連上http://127.0.0.1:8000 並點擊1+1<ADD>按鈕 ;程式發生segmentation fault, 
+* 答案2: (建議先讀完投影片)　　
+
+gdb ./eserv進入gdb的交互命令,照著投影片說明,用瀏覽器連上http://127.0.0.1:8000 並點擊1+1<ADD>按鈕 ;程式發生segmentation fault, 　　
+  
 #0  0x00007ffff7e5f206 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
 #1  0x00007ffff7e189ef in vfprintf () from /lib/x86_64-linux-gnu/libc.so.6
 #2  0x00007ffff7e1f606 in printf () from /lib/x86_64-linux-gnu/libc.so.6
@@ -29,7 +31,8 @@ gdb ./eserv進入gdb的交互命令,照著投影片說明,用瀏覽器連上http
 #8  0x0000555555559d0f in requestHandler (s=0x4) at libeserv/request.c:246
 #9  0x00007ffff7f8ffa3 in start_thread () from /lib/x86_64-linux-gnu/libpthread.so.0
 #10 0x00007ffff7ec04cf in clone () from /lib/x86_64-linux-gnu/libc.so.6
-接著我們將斷點下在適當的點,
+
+接著我們將斷點下在適當的點,　　
 (gdb) break cgi_custom.c:10
 然後重新執行
 (gdb) run 
