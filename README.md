@@ -20,17 +20,17 @@
 gdb ./eserv進入gdb的交互命令,照著投影片說明,用瀏覽器連上http://127.0.0.1:8000 並點擊1+1<ADD>按鈕 ;程式發生segmentation fault ;      
 
 `
-#0  0x00007ffff7e5f206 in ?? () from /lib/x86_64-linux-gnu/libc.so.6
-#1  0x00007ffff7e189ef in vfprintf () from /lib/x86_64-linux-gnu/libc.so.6
-#2  0x00007ffff7e1f606 in printf () from /lib/x86_64-linux-gnu/libc.so.6
-#3  0x000055555555a34a in print_param (pHttp=0x7ffff75c13b0) at libeserv/analysis.c:182
-#4  0x000055555555aa23 in cgi_page_sum (pHttp=0x7ffff75c13b0) at cgi_custom.c:10
-#5  0x000055555555a7ad in cgi_handler (pHttp=0x7ffff75c13b0, handle=0x55555555a9fe <cgi_page_sum>) at libeserv/cgi.c:23
-#6  0x0000555555559a35 in cgiProcess (pHttp=0x7ffff75c13b0) at libeserv/request.c:160
-#7  0x0000555555559b30 in replyHandler (pHttp=0x7ffff75c13b0) at libeserv/request.c:192
-#8  0x0000555555559d0f in requestHandler (s=0x4) at libeserv/request.c:246
-#9  0x00007ffff7f8ffa3 in start_thread () from /lib/x86_64-linux-gnu/libpthread.so.0
-#10 0x00007ffff7ec04cf in clone () from /lib/x86_64-linux-gnu/libc.so.6
+#0  0x00007ffff7e5f206 in ?? () from /lib/x86_64-linux-gnu/libc.so.6  
+#1  0x00007ffff7e189ef in vfprintf () from /lib/x86_64-linux-gnu/libc.so.6  
+#2  0x00007ffff7e1f606 in printf () from /lib/x86_64-linux-gnu/libc.so.6  
+#3  0x000055555555a34a in print_param (pHttp=0x7ffff75c13b0) at libeserv/analysis.c:182  
+#4  0x000055555555aa23 in cgi_page_sum (pHttp=0x7ffff75c13b0) at cgi_custom.c:10  
+#5  0x000055555555a7ad in cgi_handler (pHttp=0x7ffff75c13b0, handle=0x55555555a9fe <cgi_page_sum>) at libeserv/cgi.c:23  
+#6  0x0000555555559a35 in cgiProcess (pHttp=0x7ffff75c13b0) at libeserv/request.c:160  
+#7  0x0000555555559b30 in replyHandler (pHttp=0x7ffff75c13b0) at libeserv/request.c:192  
+#8  0x0000555555559d0f in requestHandler (s=0x4) at libeserv/request.c:246  
+#9  0x00007ffff7f8ffa3 in start_thread () from /lib/x86_64-linux-gnu/libpthread.so.0  
+#10 0x00007ffff7ec04cf in clone () from /lib/x86_64-linux-gnu/libc.so.6  
 `
 
 接著我們將斷點下在適當的點,  
